@@ -1,12 +1,11 @@
-import express from "express";
-const app = express();
-const port = 3000;
+// Import the fs module
+import fs from 'fs';
 
-var x  = 2;
-
-console.log(x);
-
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}.`);
+// Write data to a file
+fs.writeFile('myfile.txt', 'Hello World!', (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('File written successfully!');
 });
