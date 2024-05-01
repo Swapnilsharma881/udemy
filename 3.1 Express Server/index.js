@@ -1,11 +1,9 @@
-// Import the fs module
-import fs from 'fs';
+import express from "express";
+const app = express();
+const port = 3000;
 
-// Write data to a file
-fs.writeFile('myfile.txt', 'Hello World!', (err) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log('File written successfully!');
+console.log("My name is Swapnil Vishwakarma");
+
+app.listen(port, ()=>{
+     console.log(`server is running on ${port}`);
 });
